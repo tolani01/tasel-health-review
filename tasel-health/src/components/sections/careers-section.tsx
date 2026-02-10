@@ -200,21 +200,10 @@ export function CareersSection() {
                 position in your subject line. We review applications weekly.
               </p>
               
-              <div className="flex flex-col sm:flex-row gap-4 justify-center">
+              <div className="flex justify-center">
                 <Button 
                   size="lg" 
-                  className="bg-purple-600 hover:bg-purple-700 text-white px-12 py-6 text-lg"
-                  asChild
-                >
-                  <a href="/careers#application">
-                    <Mail className="h-5 w-5 mr-2" />
-                    Apply Online
-                  </a>
-                </Button>
-                <Button 
-                  size="lg" 
-                  variant="outline"
-                  className="border-purple-200 text-purple-700 hover:bg-purple-50 px-12 py-6 text-lg"
+                  className="bg-purple-600 hover:bg-purple-700 text-white px-16 py-6 text-lg"
                   asChild
                 >
                   <a href="mailto:info@taselhealth.com">
