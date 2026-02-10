@@ -101,17 +101,6 @@ export function AboutDualCTA() {
                   </a>
                 </Button>
                 
-                <Button 
-                  size="lg" 
-                  variant="outline"
-                  className="w-full border-purple-200 text-purple-700 hover:bg-purple-50 py-6 text-lg"
-                  asChild
-                >
-                  <a href="#careers">
-                    <Briefcase className="h-5 w-5 mr-2" />
-                    View Open Positions
-                  </a>
-                </Button>
               </div>
             </CardContent>
           </Card>
