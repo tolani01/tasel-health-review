@@ -1,5 +1,16 @@
 /** @type {import('next').NextConfig} */
+
+// GitHub Pages deployment: set base path to repo name
+const isGitHubPages = process.env.GITHUB_PAGES === 'true'
+
 const nextConfig = {
+  // Static export for GitHub Pages
+  output: 'export',
+  
+  // Base path for GitHub Pages (repo name)
+  basePath: isGitHubPages ? '/tasel-health-review' : '',
+  assetPrefix: isGitHubPages ? '/tasel-health-review/' : '',
+  
   eslint: {
     // Allow production builds to succeed even if ESLint finds issues in content pages
     ignoreDuringBuilds: true,
@@ -10,45 +21,11 @@ const nextConfig = {
     dangerouslyAllowSVG: true,
     contentDispositionType: 'attachment',
     contentSecurityPolicy: "default-src 'self'; script-src 'none'; sandbox;",
+    unoptimized: true, // Required for static export
   },
   // Performance optimizations
   compress: true,
   poweredByHeader: false,
-  
-  // Animation and media optimizations
-  async headers() {
-    return [
-      {
-        source: '/animations/:path*',
-        headers: [
-          {
-            key: 'Cache-Control',
-            value: 'public, max-age=31536000, immutable',
-          },
-        ],
-      },
-      {
-        source: '/images/:path*',
-        headers: [
-          {
-            key: 'Cache-Control',
-            value: 'public, max-age=31536000, immutable',
-          },
-        ],
-      },
-    ];
-  },
-  
-  // Redirects for SEO
-  async redirects() {
-    return [
-      {
-        source: '/home',
-        destination: '/',
-        permanent: true,
-      },
-    ];
-  },
 };
 
 module.exports = nextConfig;
