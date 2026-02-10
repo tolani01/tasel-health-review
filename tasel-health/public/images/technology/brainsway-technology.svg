@@ -1,0 +1,119 @@
+<svg width="800" height="600" viewBox="0 0 800 600" xmlns="http://www.w3.org/2000/svg">
+  <defs>
+    <linearGradient id="bgGradient" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" style="stop-color:#F8FAFC;stop-opacity:1" />
+      <stop offset="100%" style="stop-color:#E2E8F0;stop-opacity:1" />
+    </linearGradient>
+    <linearGradient id="deviceGradient" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" style="stop-color:#A855F7;stop-opacity:1" />
+      <stop offset="100%" style="stop-color:#14B8A6;stop-opacity:1" />
+    </linearGradient>
+    <linearGradient id="coilGradient" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" style="stop-color:#14B8A6;stop-opacity:1" />
+      <stop offset="100%" style="stop-color:#0D9488;stop-opacity:1" />
+    </linearGradient>
+    <filter id="glow">
+      <feGaussianBlur stdDeviation="3" result="coloredBlur"/>
+      <feMerge> 
+        <feMergeNode in="coloredBlur"/>
+        <feMergeNode in="SourceGraphic"/>
+      </feMerge>
+    </filter>
+    <filter id="shadow">
+      <feDropShadow dx="0" dy="4" stdDeviation="8" flood-color="#000000" flood-opacity="0.1"/>
+    </filter>
+  </defs>
+  
+  <!-- Background -->
+  <rect width="800" height="600" fill="url(#bgGradient)"/>
+  
+  <!-- Title -->
+  <text x="400" y="40" text-anchor="middle" font-family="Inter, sans-serif" font-size="24" font-weight="bold" fill="#1E293B">
+    BrainsWay Deep TMS Technology
+  </text>
+  
+  <!-- Main TMS Device -->
+  <g transform="translate(400, 300)">
+    <!-- Device base -->
+    <rect x="-100" y="-20" width="200" height="40" rx="20" fill="url(#deviceGradient)" filter="url(#shadow)"/>
+    
+    <!-- H-Coil -->
+    <ellipse cx="0" cy="-40" rx="80" ry="30" fill="url(#coilGradient)" filter="url(#glow)"/>
+    
+    <!-- Coil details -->
+    <circle cx="-60" cy="-40" r="8" fill="none" stroke="#0D9488" stroke-width="2"/>
+    <circle cx="60" cy="-40" r="8" fill="none" stroke="#0D9488" stroke-width="2"/>
+    <circle cx="-30" cy="-40" r="6" fill="none" stroke="#0D9488" stroke-width="1.5"/>
+    <circle cx="30" cy="-40" r="6" fill="none" stroke="#0D9488" stroke-width="1.5"/>
+    
+    <!-- Magnetic field lines -->
+    <path d="M-80 -70 Q-40 -90 0 -70 Q40 -90 80 -70" 
+          fill="none" 
+          stroke="#14B8A6" 
+          stroke-width="3" 
+          opacity="0.6"/>
+    <path d="M-80 -50 Q-40 -30 0 -50 Q40 -30 80 -50" 
+          fill="none" 
+          stroke="#A855F7" 
+          stroke-width="3" 
+          opacity="0.6"/>
+    
+    <!-- Brain target -->
+    <ellipse cx="0" cy="60" rx="60" ry="40" fill="none" stroke="#A855F7" stroke-width="2" opacity="0.4"/>
+    <text x="0" y="65" text-anchor="middle" font-family="Inter, sans-serif" font-size="12" fill="#A855F7">Target Area</text>
+  </g>
+  
+  <!-- Technology features -->
+  <g transform="translate(50, 100)">
+    <!-- Feature 1: Deep Penetration -->
+    <rect x="0" y="0" width="200" height="80" rx="8" fill="white" filter="url(#shadow)"/>
+    <circle cx="30" cy="30" r="20" fill="#14B8A6" opacity="0.8"/>
+    <text x="30" y="35" text-anchor="middle" font-family="Inter, sans-serif" font-size="16" font-weight="bold" fill="white">6cm</text>
+    <text x="60" y="25" font-family="Inter, sans-serif" font-size="14" font-weight="600" fill="#1E293B">Deep Penetration</text>
+    <text x="60" y="40" font-family="Inter, sans-serif" font-size="12" fill="#64748B">Reaches deeper brain regions</text>
+    <text x="60" y="55" font-family="Inter, sans-serif" font-size="12" fill="#64748B">than traditional TMS</text>
+  </g>
+  
+  <g transform="translate(300, 100)">
+    <!-- Feature 2: H-Coil Technology -->
+    <rect x="0" y="0" width="200" height="80" rx="8" fill="white" filter="url(#shadow)"/>
+    <circle cx="30" cy="30" r="20" fill="#A855F7" opacity="0.8"/>
+    <text x="30" y="35" text-anchor="middle" font-family="Inter, sans-serif" font-size="12" font-weight="bold" fill="white">H</text>
+    <text x="60" y="25" font-family="Inter, sans-serif" font-size="14" font-weight="600" fill="#1E293B">H-Coil Technology</text>
+    <text x="60" y="40" font-family="Inter, sans-serif" font-size="12" fill="#64748B">Precise targeting with</text>
+    <text x="60" y="55" font-family="Inter, sans-serif" font-size="12" fill="#64748B">reduced discomfort</text>
+  </g>
+  
+  <g transform="translate(550, 100)">
+    <!-- Feature 3: FDA Cleared -->
+    <rect x="0" y="0" width="200" height="80" rx="8" fill="white" filter="url(#shadow)"/>
+    <circle cx="30" cy="30" r="20" fill="#10B981" opacity="0.8"/>
+    <text x="30" y="35" text-anchor="middle" font-family="Inter, sans-serif" font-size="10" font-weight="bold" fill="white">FDA</text>
+    <text x="60" y="25" font-family="Inter, sans-serif" font-size="14" font-weight="600" fill="#1E293B">FDA Cleared</text>
+    <text x="60" y="40" font-family="Inter, sans-serif" font-size="12" fill="#64748B">Clinically proven and</text>
+    <text x="60" y="55" font-family="Inter, sans-serif" font-size="12" fill="#64748B">medically approved</text>
+  </g>
+  
+  <!-- Process flow -->
+  <g transform="translate(100, 450)">
+    <text x="0" y="0" font-family="Inter, sans-serif" font-size="16" font-weight="600" fill="#1E293B">Treatment Process:</text>
+    <text x="0" y="25" font-family="Inter, sans-serif" font-size="14" fill="#64748B">1. Precise brain mapping</text>
+    <text x="0" y="45" font-family="Inter, sans-serif" font-size="14" fill="#64748B">2. H-Coil positioning</text>
+    <text x="0" y="65" font-family="Inter, sans-serif" font-size="14" fill="#64748B">3. Magnetic pulse delivery</text>
+    <text x="0" y="85" font-family="Inter, sans-serif" font-size="14" fill="#64748B">4. Real-time monitoring</text>
+  </g>
+  
+  <!-- Floating elements -->
+  <circle cx="100" cy="200" r="3" fill="#14B8A6" opacity="0.6">
+    <animate attributeName="opacity" values="0.6;1;0.6" dur="2s" repeatCount="indefinite"/>
+  </circle>
+  <circle cx="700" cy="180" r="4" fill="#A855F7" opacity="0.7">
+    <animate attributeName="opacity" values="0.7;1;0.7" dur="1.5s" repeatCount="indefinite"/>
+  </circle>
+  <circle cx="150" cy="500" r="3" fill="#10B981" opacity="0.5">
+    <animate attributeName="opacity" values="0.5;1;0.5" dur="2.5s" repeatCount="indefinite"/>
+  </circle>
+  <circle cx="650" cy="520" r="4" fill="#14B8A6" opacity="0.6">
+    <animate attributeName="opacity" values="0.6;1;0.6" dur="1.8s" repeatCount="indefinite"/>
+  </circle>
+</svg>

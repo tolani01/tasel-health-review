@@ -1,0 +1,10 @@
+# OS files
+Thumbs.db
+.DS_Store
+
+# IDE
+.vscode/
+.idea/
+
+# Binary documents (not suitable for git)
+*.docx

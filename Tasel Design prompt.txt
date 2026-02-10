@@ -1,0 +1,68 @@
+You are a senior full-stack developer. 
+Build a complete modern website for **Tasel Health**, a futurist outpatient mental health clinic specializing in TMS (Transcranial Magnetic Stimulation), psychiatric medication management, and counseling. 
+The website should be production-ready, mobile-first, SEO-optimized, and easy to deploy.
+
+## Requirements
+
+### Tech Stack
+- Framework: Next.js (latest version with App Router).
+- Styling: TailwindCSS.
+- Components: shadcn/ui + lucide-react icons.
+- Animations: Framer Motion.
+- Hosting-ready: Vercel.
+- SEO: add meta tags, schema.org for healthcare/medical services, and clean URL slugs.
+
+### Global Design
+- Colors: calming lavender (#9D84B7), teal (#3AAFA9), lots of white space.
+- Typography: modern sans-serif (Inter or Lato).
+- Layout: clean, minimal, rounded edges, mobile-first responsive.
+- Accessibility: WCAG 2.1 AA compliant.
+
+### Pages & Sections
+1. **Homepage**
+   - Hero section with tagline: *“Compassionate Care. Evidence-Based Treatment.”*
+   - Large CTA button: “Book a Consultation” (link to booking form).
+   - Sub-CTA: “Learn how TMS works” (anchors to Services section).
+   - Embedded video/animation placeholder explaining TMS.
+   - Quick links to Services (TMS, Psychiatry, Counseling).
+   - Testimonials carousel with patient stories.
+   - Footer: contact info, map embed, copyright.
+
+2. **About Us**
+   - Mission statement.
+   - Provider bios with headshots, credentials, and specialties.
+
+3. **Services**
+   - TMS Therapy (dedicated subpage with FAQs, insurance info).
+   - Psychiatric Medication Management.
+   - Counseling/Therapy.
+   - Each service has a “Request Consultation” button.
+
+4. **Knowledge Hub (Blog)**
+   - SEO-optimized posts about TMS, depression, anxiety, psychiatry.
+   - Dynamic content structure using Markdown or CMS-ready folder.
+
+5. **Contact**
+   - Embedded Google Map.
+   - Contact form (HIPAA-lite, non-sensitive inquiries only).
+   - Phone, email, SMS (“Text CARE to 78579”) placeholders.
+
+### Interactive Features
+- **Booking Integration:** Create a Booking page with a placeholder for Calendly/Zocdoc iframe.
+- **AI Chatbot Widget:** Fixed bottom-right icon → opens modal with LLM chat interface (placeholder div with “Ask about TMS”).
+- **Self-Assessment Quiz:** Basic multi-step form (Do I qualify for TMS? → email capture + consultation CTA).
+
+### SEO & Performance
+- Add proper `<Head>` metadata per page.
+- Use semantic HTML5 tags.
+- Pre-render main pages for speed.
+- Include schema.org JSON-LD for medical services & FAQs.
+- Sitemap and robots.txt.
+
+### Delivery
+- Provide the entire Next.js project structure with:
+  - `/app` folder routing.
+  - `/components` folder for reusable cards, navbar, footer, chatbot, etc.
+  - `/public` folder with placeholder logo and images.
+- Ensure the site runs locally with `npm run dev` and is deployable to Vercel without errors.
+

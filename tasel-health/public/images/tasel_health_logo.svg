@@ -1,0 +1,29 @@
+<svg width="200" height="60" viewBox="0 0 200 60" xmlns="http://www.w3.org/2000/svg">
+  <defs>
+    <linearGradient id="logoGradient" x1="0%" y1="0%" x2="100%" y2="0%">
+      <stop offset="0%" style="stop-color:#a855f7;stop-opacity:1" />
+      <stop offset="100%" style="stop-color:#14b8a6;stop-opacity:1" />
+    </linearGradient>
+  </defs>
+  
+  <!-- Background circle -->
+  <circle cx="30" cy="30" r="25" fill="url(#logoGradient)" opacity="0.1"/>
+  
+  <!-- Brain/Medical icon -->
+  <path d="M20 20 C20 15, 25 10, 30 10 C35 10, 40 15, 40 20 C40 25, 35 30, 30 30 C25 30, 20 25, 20 20 Z" 
+        fill="url(#logoGradient)" stroke="url(#logoGradient)" stroke-width="2"/>
+  
+  <!-- Neural network lines -->
+  <path d="M30 15 L35 20 M30 25 L35 20 M25 20 L30 15 M25 20 L30 25" 
+        stroke="url(#logoGradient)" stroke-width="1.5" fill="none"/>
+  
+  <!-- Tasel Health Text -->
+  <text x="55" y="25" font-family="Arial, sans-serif" font-size="18" font-weight="bold" fill="url(#logoGradient)">
+    Tasel Health
+  </text>
+  
+  <!-- Subtitle -->
+  <text x="55" y="42" font-family="Arial, sans-serif" font-size="10" fill="#666">
+    Advanced TMS Therapy
+  </text>
+</svg>
