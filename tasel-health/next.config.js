@@ -3,13 +3,20 @@
 // GitHub Pages deployment: set base path to repo name
 const isGitHubPages = process.env.GITHUB_PAGES === 'true'
 
+const basePath = isGitHubPages ? '/tasel-health-review' : ''
+
 const nextConfig = {
   // Static export for GitHub Pages
   output: 'export',
   
   // Base path for GitHub Pages (repo name)
-  basePath: isGitHubPages ? '/tasel-health-review' : '',
+  basePath,
   assetPrefix: isGitHubPages ? '/tasel-health-review/' : '',
+  
+  // Expose basePath to client components for image paths
+  env: {
+    NEXT_PUBLIC_BASE_PATH: basePath,
+  },
   
   eslint: {
     // Allow production builds to succeed even if ESLint finds issues in content pages

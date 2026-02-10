@@ -63,7 +63,7 @@ export default function ServicesPage() {
       {/* Hero image only (no overlay/CTA) */}
       <section className="relative h-[46vh] md:h-[56vh]">
         <Image
-          src="/images/services-hero.png"
+          src={`${process.env.NEXT_PUBLIC_BASE_PATH || ''}/images/services-hero.png`}
           alt="Tasel Health services hero"
           fill
           priority

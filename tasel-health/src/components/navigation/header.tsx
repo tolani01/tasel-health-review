@@ -38,7 +38,7 @@ export function Header() {
           {/* Logo */}
           <Link href="/" className="flex items-center space-x-3">
             <Image
-              src="/images/tasel_health_logo.png"
+              src={`${process.env.NEXT_PUBLIC_BASE_PATH || ''}/images/tasel_health_logo.png`}
               alt="Tasel Health"
               width={40}
               height={40}

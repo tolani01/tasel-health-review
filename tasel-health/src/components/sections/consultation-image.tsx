@@ -5,7 +5,7 @@ export function ConsultationImageSection() {
     <section className="bg-white">
       <div className="relative w-full aspect-[3/2] sm:aspect-[16/9]">
         <Image
-          src="/images/home-consultation.png"
+          src={`${process.env.NEXT_PUBLIC_BASE_PATH || ''}/images/home-consultation.png`}
           alt="Patients and provider at Tasel Health clinic during consultation"
           fill
           priority
