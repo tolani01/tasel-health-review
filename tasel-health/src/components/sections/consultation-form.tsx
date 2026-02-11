@@ -246,6 +246,7 @@ export function ConsultationForm({
                 </SelectTrigger>
                 <SelectContent>
                   <SelectItem value="tms">TMS Therapy</SelectItem>
+                  <SelectItem value="ketamine-spravato">Ketamine/Spravato</SelectItem>
                   <SelectItem value="psychiatry">Psychiatric Care</SelectItem>
                   <SelectItem value="counseling">Therapy & Counseling</SelectItem>
                   <SelectItem value="comprehensive">Comprehensive Care</SelectItem>

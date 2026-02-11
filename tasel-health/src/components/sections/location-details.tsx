@@ -1,7 +1,7 @@
 'use client'
 
 import { Card, CardContent, CardHeader, CardTitle } from '@/components/ui/card'
-import { MapPin, Car, Wifi, Shield, Clock, Phone } from 'lucide-react'
+import { MapPin, Car, Wifi, Shield, Clock } from 'lucide-react'
 
 export function LocationDetails() {
   const amenities = [
@@ -27,40 +27,6 @@ export function LocationDetails() {
     }
   ]
 
-  const directions = [
-    {
-      from: 'From I-35 North',
-      steps: [
-        'Take Exit 123 for NW 23rd Street',
-        'Turn right onto NW 23rd Street',
-        'Continue for 2 miles',
-        'Turn left onto Health Plaza Drive',
-        'We are on the right side'
-      ]
-    },
-    {
-      from: 'From I-40 East',
-      steps: [
-        'Take Exit 150 for Classen Boulevard',
-        'Turn left onto Classen Boulevard',
-        'Continue for 3 miles',
-        'Turn right onto NW 23rd Street',
-        'Turn left onto Health Plaza Drive',
-        'We are on the right side'
-      ]
-    },
-    {
-      from: 'From Downtown OKC',
-      steps: [
-        'Head north on Broadway Extension',
-        'Turn right onto NW 23rd Street',
-        'Continue for 4 miles',
-        'Turn left onto Health Plaza Drive',
-        'We are on the right side'
-      ]
-    }
-  ]
-
   return (
     <section className="py-20 bg-white">
       <div className="container mx-auto px-4">
@@ -74,122 +40,93 @@ export function LocationDetails() {
           </p>
         </div>
 
-        <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 mb-16">
+        {/* Location Cards */}
+        <div className="grid grid-cols-1 md:grid-cols-2 gap-8 mb-16">
           {/* Oklahoma City Address & Contact */}
-          <div className="space-y-8">
-            <Card className="tasel-card">
-              <CardHeader>
-                <CardTitle className="text-2xl font-bold text-gray-900 flex items-center">
-                  <MapPin className="h-6 w-6 text-lavender-600 mr-3" />
-                  Oklahoma City
-                </CardTitle>
-              </CardHeader>
-              <CardContent className="space-y-4">
-                <div>
-                  <h3 className="font-semibold text-gray-900 mb-2">Physical Address</h3>
-                  <p className="text-gray-600">
-                    9210 S Western, Suite A-21<br />
-                    Oklahoma City, OK 73139
-                  </p>
-                </div>
-                <div>
-                  <h3 className="font-semibold text-gray-900 mb-2">Phone</h3>
-                  <a href="tel:+14059341681" className="text-lavender-600 hover:text-lavender-700 font-medium">405-934-1681</a>
-                </div>
-                <div>
-                  <h3 className="font-semibold text-gray-900 mb-2">Email</h3>
-                  <p className="text-gray-600">info@taselhealth.com</p>
-                </div>
-              </CardContent>
-            </Card>
-
-            {/* San Antonio Address & Contact */}
-            <Card className="tasel-card">
-              <CardHeader>
-                <CardTitle className="text-2xl font-bold text-gray-900 flex items-center">
-                  <MapPin className="h-6 w-6 text-lavender-600 mr-3" />
-                  San Antonio
-                </CardTitle>
-              </CardHeader>
-              <CardContent className="space-y-4">
-                <div>
-                  <h3 className="font-semibold text-gray-900 mb-2">Physical Address</h3>
-                  <p className="text-gray-600">
-                    4402 Vance Jackson Rd, Suite 218<br />
-                    San Antonio, TX 78230
-                  </p>
-                </div>
-                <div>
-                  <h3 className="font-semibold text-gray-900 mb-2">Phone</h3>
-                  <a href="tel:+12102022341" className="text-lavender-600 hover:text-lavender-700 font-medium">210-202-2341</a>
-                </div>
-                <div>
-                  <h3 className="font-semibold text-gray-900 mb-2">Fax</h3>
-                  <p className="text-gray-600">210-874-2022</p>
-                </div>
-                <div>
-                  <h3 className="font-semibold text-gray-900 mb-2">Email</h3>
-                  <p className="text-gray-600">info@taselhealth.com</p>
-                </div>
-              </CardContent>
-            </Card>
-
-            {/* Amenities */}
-            <div>
-              <h3 className="text-2xl font-bold text-gray-900 mb-6">Facility Amenities</h3>
-              <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
-                {amenities.map((amenity, index) => {
-                  const Icon = amenity.icon
-                  return (
-                    <Card key={amenity.title} className="tasel-card hover:shadow-lg transition-all duration-300">
-                      <CardContent className="p-4">
-                        <div className="flex items-start space-x-3">
-                          <div className="p-2 rounded-lg bg-gradient-to-r from-lavender-100 to-teal-100">
-                            <Icon className="h-5 w-5 text-lavender-600" />
-                          </div>
-                          <div>
-                            <h4 className="font-semibold text-gray-900 mb-1">
-                              {amenity.title}
-                            </h4>
-                            <p className="text-sm text-gray-600">
-                              {amenity.description}
-                            </p>
-                          </div>
-                        </div>
-                      </CardContent>
-                    </Card>
-                  )
-                })}
+          <Card className="tasel-card">
+            <CardHeader>
+              <CardTitle className="text-2xl font-bold text-gray-900 flex items-center">
+                <MapPin className="h-6 w-6 text-lavender-600 mr-3" />
+                Oklahoma City
+              </CardTitle>
+            </CardHeader>
+            <CardContent className="space-y-4">
+              <div>
+                <h3 className="font-semibold text-gray-900 mb-2">Physical Address</h3>
+                <p className="text-gray-600">
+                  9210 S Western, Suite A-21<br />
+                  Oklahoma City, OK 73139
+                </p>
               </div>
-            </div>
-          </div>
+              <div>
+                <h3 className="font-semibold text-gray-900 mb-2">Phone</h3>
+                <a href="tel:+14059341681" className="text-lavender-600 hover:text-lavender-700 font-medium">405-934-1681</a>
+              </div>
+              <div>
+                <h3 className="font-semibold text-gray-900 mb-2">Email</h3>
+                <p className="text-gray-600">info@taselhealth.com</p>
+              </div>
+            </CardContent>
+          </Card>
 
-          {/* Directions */}
-          <div id="directions" className="scroll-mt-24">
-            <h3 className="text-2xl font-bold text-gray-900 mb-6">Directions</h3>
-            <div className="space-y-6">
-              {directions.map((direction, index) => (
-                <Card key={direction.from} className="tasel-card">
-                  <CardHeader>
-                    <CardTitle className="text-lg font-semibold text-gray-900">
-                      {direction.from}
-                    </CardTitle>
-                  </CardHeader>
-                  <CardContent>
-                    <ol className="space-y-2">
-                      {direction.steps.map((step, stepIndex) => (
-                        <li key={stepIndex} className="flex items-start text-sm text-gray-600">
-                          <span className="w-6 h-6 bg-lavender-100 text-lavender-600 rounded-full flex items-center justify-center text-xs font-semibold mr-3 mt-0.5 flex-shrink-0">
-                            {stepIndex + 1}
-                          </span>
-                          {step}
-                        </li>
-                      ))}
-                    </ol>
+          {/* San Antonio Address & Contact */}
+          <Card className="tasel-card">
+            <CardHeader>
+              <CardTitle className="text-2xl font-bold text-gray-900 flex items-center">
+                <MapPin className="h-6 w-6 text-lavender-600 mr-3" />
+                San Antonio
+              </CardTitle>
+            </CardHeader>
+            <CardContent className="space-y-4">
+              <div>
+                <h3 className="font-semibold text-gray-900 mb-2">Physical Address</h3>
+                <p className="text-gray-600">
+                  4402 Vance Jackson Rd, Suite 218<br />
+                  San Antonio, TX 78230
+                </p>
+              </div>
+              <div>
+                <h3 className="font-semibold text-gray-900 mb-2">Phone</h3>
+                <a href="tel:+12102022341" className="text-lavender-600 hover:text-lavender-700 font-medium">210-202-2341</a>
+              </div>
+              <div>
+                <h3 className="font-semibold text-gray-900 mb-2">Fax</h3>
+                <p className="text-gray-600">210-874-2022</p>
+              </div>
+              <div>
+                <h3 className="font-semibold text-gray-900 mb-2">Email</h3>
+                <p className="text-gray-600">info@taselhealth.com</p>
+              </div>
+            </CardContent>
+          </Card>
+        </div>
+
+        {/* Amenities */}
+        <div className="max-w-3xl mx-auto">
+          <h3 className="text-2xl font-bold text-gray-900 mb-6 text-center">Facility Amenities</h3>
+          <div className="grid grid-cols-1 sm:grid-cols-2 gap-4">
+            {amenities.map((amenity) => {
+              const Icon = amenity.icon
+              return (
+                <Card key={amenity.title} className="tasel-card hover:shadow-lg transition-all duration-300">
+                  <CardContent className="p-4">
+                    <div className="flex items-start space-x-3">
+                      <div className="p-2 rounded-lg bg-gradient-to-r from-lavender-100 to-teal-100">
+                        <Icon className="h-5 w-5 text-lavender-600" />
+                      </div>
+                      <div>
+                        <h4 className="font-semibold text-gray-900 mb-1">
+                          {amenity.title}
+                        </h4>
+                        <p className="text-sm text-gray-600">
+                          {amenity.description}
+                        </p>
+                      </div>
+                    </div>
                   </CardContent>
                 </Card>
-              ))}
-            </div>
+              )
+            })}
           </div>
         </div>
       </div>
